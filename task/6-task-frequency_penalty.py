@@ -11,8 +11,8 @@ from task.app.main import run
 run(
     deployment_name='gpt-4o',
     print_only_content=True,
-    # TODO:
-    #  Use `frequency_penalty` parameter with different range (-2.0 to 2.0).
+    frequency_penalty=1.0  # Reduces repetition: -2.0 to 2.0 (default: 0.0)
+    # Try different values: -2.0, 0.0, 1.0, 2.0 to see the effect
 )
 
 # Pay attention that when we set for `gpt-4o` frequency_penalty as -2.0 - the request is running too long,

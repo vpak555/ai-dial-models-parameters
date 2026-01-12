@@ -11,8 +11,8 @@ from task.app.main import run
 run(
     deployment_name='gpt-4o',
     print_only_content=True,
-    # TODO:
-    #  Use `presence_penalty` parameter with different range (-2.0 to 2.0)
+    presence_penalty=1.0  # Encourages topic diversity: -2.0 to 2.0 (default: 0.0)
+    # Try different values: -2.0, 0.0, 1.0, 2.0 to see the effect
 )
 
 # In the final result, we can see that the higher `presence_penalty` (2.0) the more LLM is trying to add topics that
